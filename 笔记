@@ -30,8 +30,62 @@
 					4) 用margin:0 auto设置水平居中：使用margin:0 auto在standards模式下可以使元素水平居中，但在quirks模式下却会失效。
 
 2. html的用途: Hypertext Markup Language,超文本连接标记语言,用来写网页.
-2. dom用途: DOM使页面的交互性大大地增强  DOM的设计是以对象管理组织（OMG）的规约为基础的，因此可以用于任何编程语言。最初人们把它认为是一种让JavaScript在浏览器间可移植的方法，不过DOM的应用已经远远超出这个范围。Dom技术使得用户页面可以动态地变化，如可以动态地显示或隐藏一个元素，改变它们的属性，增加一个元素等，Dom技术使得页面的交互性大大地增强。
-3. css 用途: 层叠样式表 网页制作时采用CSS技术，可以有效地对全站页面有共同性质属性的布局、字体、颜色、背景和其它效果属性实现更加精确的控制。
-4. js 用途: 一种高级编程语言，通过解释执行，是一门动态类型，面向对象（基于原型）的直译语言[4]。不同于服务器端脚本语言，例如PHP与ASP，JavaScript主要被作为客户端脚本语言在用户的浏览器上运行，不需要服务器的支持。所以在早期程序员比较青睐于JavaScript以减少对服务器的负担，而与此同时也带来另一个问题：安全性。而随着服务器的强壮，虽然现在的程序员更喜欢运行于服务端的脚本以保证安全，但JavaScript仍然以其跨平台、容易上手等优势大行其道。同时，有些特殊功能（如AJAX）必须依赖JavaScript在客户端进行支持。随着引擎如V8和框架如Node.js的发展，及其事件驱动及异步IO等特性，JavaScript逐渐被用来编写服务器端程序。且在近几年中，Node.js的出世，让JavaScript也具有了一定的服务器功能，且在某些方面比PHP的效果更为显著。
+2. dom用途: DOM使页面的交互性大大地增强, 优势: Dom技术使得页面的交互性大大地增强了.
+	  DOM的设计是以对象管理组织（OMG）的规约为基础的，因此可以用于任何编程语言。最初人们把它认为是一种让JavaScript在浏览器间可移植的方法，不过DOM的应用已经远远超出这个范围。Dom技术使得用户页面可以动态地变化，如可以动态地显示或隐藏一个元素，改变它们的属性，增加一个元素等，Dom技术使得页面的交互性大大地增强。
+3. css 用途: 层叠样式表, 对网页进行布局. 优势: 对网页的控制更加精确,有诸如: 类选择器,ID选择器等等.适合做布局.
+	网页制作时采用CSS技术，可以有效地对全站页面有共同性质属性的布局、字体、颜色、背景和其它效果属性实现更加精确的控制。
+4. js 用途: 一种高级编程语言，通过解释执行，是一门动态类型，面向对象（基于原型）的直译语言[4]。 优势: 
+		不同于服务器端脚本语言，例如PHP与ASP，JavaScript主要被作为客户端脚本语言在用户的浏览器上运行，不需要服务器的支持。所以在早期程序员比较青睐于JavaScript以减少对服务器的负担，而与此同时也带来另一个问题：安全性。而随着服务器的强壮，虽然现在的程序员更喜欢运行于服务端的脚本以保证安全，但JavaScript仍然以其跨平台、容易上手等优势大行其道。同时，有些特殊功能（如AJAX）必须依赖JavaScript在客户端进行支持。随着引擎如V8和框架如Node.js的发展，及其事件驱动及异步IO等特性，JavaScript逐渐被用来编写服务器端程序。且在近几年中，Node.js的出世，让JavaScript也具有了一定的服务器功能，且在某些方面比PHP的效果更为显著。
+
+
+二. 字符，数字，日期，未定义类型检测和相互转换，实现例子，实现数组，字符串，相互转换
+作用域，js数据类型的作用，运算符，流程控制，循环，分支。
+	1. 变量: 变量的命名规则
+	2. 数据类型: 弱类型语言,不用事先声明变量类型.变量的类型也不固定(var i = 10; i = "123"; 这样也是可以的)
+		boolean类型: true | false
+	3. 数组: 
+		声明 var beatles = Array("John", "paul", "George", "Ringo") | var beatles = ["John", "paul", "George", "Ringo"]
+		数组的元素不必相同.
+		数组的下标可以为字符串: 
+			var beatles = Array();
+			beatles["vocalist"]["name"] = john
+			beatles["vocalist"]["year"] = 1940
+			beatles["vocalist"]["living"] = false 
+	4. 操作符
+		a. 算术操作符 变量可以包含操作: var total = (1 + 4) * 5; 加号可以用于字符串 var message = "I am feeling" + "happy"(拼接(concatenation))
+		b. 数值和字符串拼接在一起,可以将数值自动转换为字符串.
+		c. 条件语句(conditional statement) if (statement) {}
+		d. 比较操作符(>,<,>=,<=, ==)
+		e. 逻辑操作符: &&, ||, !
+		f. 循环语句: while(conditional) {} do {}while(conditional) for (initial condition; test condition; alter condition) {}
+	5. 函数: function name(arguments) {statements;}, 函数可以将返回结果赋值给变量使用,好比一种数据类型.
+	6. 变量作用域
+		a. 全局变量: 在脚本中的任何位置都被引用.
+		b. 局部变量: 只存在于对它做出声明的那个函数的内部.
+	7. 对象:  js脚本,属性和方法都使用'点'语法来访问.
+		属性: 隶属于某个特定对象的变量.
+		方法: 是只有某个特定对象才能调用的函数.
+		创建实例: new关键字. var jeremy = new Person;
+		內建对象: Math,Date,Array
+		宿主对象: 由web浏览器提供的预定义对象被称为宿主对象(host object).
+			宿主对象包括:Form, Image, Element.可以通过这些对象获得关于某给定网页上的表单,图像和各种表单元素的信息.
+			最基础的宿主对象是 window 对象,window 对象对应着浏览器窗口本身,这个对象的属性和方法通常被称为BOM(浏览器对象模型).
+	8. 节点:
+		a. 元素节点: 诸如<body>, <p>之类的
+		b. 文本节点: 文本节点总是被包含在元素节点的内部.
+		c. 属性节点: 就是标签里面的属性,例如 <p title="a gentle reminder">Don't forget to buy this stuff.</p>,这个title就是个属性节点.
+	DOM总结: 
+		1. 一份文档就是一棵节点树
+		2. 节点分为不同的类型: 元素节点, 属性节点和文本节点等.
+		3. getElementById()方法将返回一个对象,该对象对应着文档里的一个特定的元素节点.
+		4. getElementByTagName()方法将返回一个对象数组,它们分别对应着文档里的一个特定的元素节点.
+		5. 这些节点中的每个都是一个对象.
+	9. getAttribute()方法
+	小结: 
+		提供了DOM四个方法
+			1. getElementsByTagName()
+			2. getElementById()
+			3. setAttribute()
+			4. getAttribute()
 
 
