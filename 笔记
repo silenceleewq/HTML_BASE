@@ -1,0 +1,37 @@
+一.明确html4，html5区别，了解html，dom，css，js的用途，及各自的优势，适合做什么
+1. html4和HTML5 的区别(http://www.oschina.net/news/22219/html4-html5-differences/): 
+	1. HTML5 标准还在制定中 
+	2. 简化的语法 
+	3. <canvas>标签替代Flash 
+	4. 新增 <header> 和 <footer> 标签 
+	5. 新增 <section> 和 <article> 标签
+	6. 新增 <menu> 和 <figure> 标签
+	7. 新增 <audio> 和 <video> 标签
+	8. 全新的表单
+	9. 删除 <b> 和 <font> 标签
+	10. 删除 <frame>, <center>, <big> 标签
+		1. 语法简化: 例如doctype的声明，你只需要写<!doctype html>就行了 http://www.jb51.net/web/34217.html(DOCTYPE的详解)
+			a.doctype html声明的作用, 
+				i. `doctype切换`:放在网页顶部的doctype声明是让浏览器进入正确呈现模式的关键,假如doctype指出当前网页是一个遵循标准（也就是HTML 4+或XHTML 1+）的文档，浏览器就会切换到Standards模式。假如没有指定doctype，或者指定HTML 3.2以及更老的版本，浏览器就切换到Quirks模式。
+				ii. doctype切换的问题: doctype切换是一个不完善的方案。即使你在Web文档中使用了一个doctype声明，浏览器也可能不会采取你希望的呈现模式来显示网页。
+				iii. 形式错误的doctype ：浏览器对doctype声明的形式和格式非常敏感，如果不能识别一个形式错误的doctype，就会强制进入Quirks模式（正是因为这个原因，所以我们建议将一个已知正确的doctype拷贝和粘贴到文档中，而不是亲自输入它）。
+				iv. 过渡期的 doctype ：  浏览器处理过渡期的doctype时，最容易出现不一致的问题。
+				v. 未知的 doctype ：浏览器在处理不能识别的doctype时，也存在不一致的现象。
+			b. 使用正确的doctype声明
+				i. doctype的作用: doctype声明指出阅读程序应该用什么规则集来解释文档中的标记。“规则”则是W3C所发布的一个文档类型定义（DTD(Document Type Definition)）中包含的规则。
+				ii. 选择正确的doctype : 为了获得正确的doctype声明，关键就是让DTD与文档所遵循的标准对应。假定文档遵循的是XHTML 1.0 Strict标准，文档的doctype声明就应该引用相应的DTD。另一方面，如果doctype声明指定的是XHTML DTD，但文档包含的是旧式风格的HTML标记，就是不恰当的；类似地，如果doctype声明指定的是HTML DTD，但文档包含的是XHTML 1.0 Strict标记，同样是不恰当的。
+				iv. 选择什么样的DOCTYPE:  开始制作符合标准的站点，第一件事情就是声明符合自己需要的DOCTYPE。
+				v. 我们选择什么样的DOCTYPE : 理想情况当然是严格的DTD，但对于我们大多数刚接触web标准的设计师来说，过渡的DTD(XHTML 1.0 Transitional)是目前理想选择(包括本站，使用的也是过渡型DTD)。
+			c. Quirks模式: 假如没有指定doctype，或者指定HTML 3.2以及更老的版本，浏览器就切换到Quirks模式。这样一来，浏览器既能正确显示遵循标准的文档，又不至于完全舍弃老式的、与标准不符的网页。
+				i. quirks模式和standards模式区别: 总体会有布局、样式解析和脚本执行三个方面的区别。
+					1) 盒模型：在W3C标准中，如果设置一个元素的宽度和高度，指的是元素内容的宽度和高度，而在Quirks 模式下，IE的宽度和高度还包含了padding和border。
+					2) 设置行内元素的高宽：在Standards模式下，给<span>等行内元素设置wdith和height都不会生效，而在quirks模式下，则会生效。
+					3) 设置百分比的高度：在standards模式下，一个元素的高度是由其包含的内容来决定的，如果父元素没有设置百分比的高度，子元素设置一个百分比的高度是无效的
+					4) 用margin:0 auto设置水平居中：使用margin:0 auto在standards模式下可以使元素水平居中，但在quirks模式下却会失效。
+
+2. html的用途: Hypertext Markup Language,超文本连接标记语言,用来写网页.
+2. dom用途: DOM使页面的交互性大大地增强  DOM的设计是以对象管理组织（OMG）的规约为基础的，因此可以用于任何编程语言。最初人们把它认为是一种让JavaScript在浏览器间可移植的方法，不过DOM的应用已经远远超出这个范围。Dom技术使得用户页面可以动态地变化，如可以动态地显示或隐藏一个元素，改变它们的属性，增加一个元素等，Dom技术使得页面的交互性大大地增强。
+3. css 用途: 层叠样式表 网页制作时采用CSS技术，可以有效地对全站页面有共同性质属性的布局、字体、颜色、背景和其它效果属性实现更加精确的控制。
+4. js 用途: 一种高级编程语言，通过解释执行，是一门动态类型，面向对象（基于原型）的直译语言[4]。不同于服务器端脚本语言，例如PHP与ASP，JavaScript主要被作为客户端脚本语言在用户的浏览器上运行，不需要服务器的支持。所以在早期程序员比较青睐于JavaScript以减少对服务器的负担，而与此同时也带来另一个问题：安全性。而随着服务器的强壮，虽然现在的程序员更喜欢运行于服务端的脚本以保证安全，但JavaScript仍然以其跨平台、容易上手等优势大行其道。同时，有些特殊功能（如AJAX）必须依赖JavaScript在客户端进行支持。随着引擎如V8和框架如Node.js的发展，及其事件驱动及异步IO等特性，JavaScript逐渐被用来编写服务器端程序。且在近几年中，Node.js的出世，让JavaScript也具有了一定的服务器功能，且在某些方面比PHP的效果更为显著。
+
+
